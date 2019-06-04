@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-left: 15px;
+  margin-right: 15px;
+  
+}
+
+.row-1 {
+  display: flex;
+  align-content: space-between;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.col-1 {
+  display: flex;
+  justify-content: flex-start;
+  background-color: gray;
+}
+
+.col-2 {
+  display: flex;
+  
+  justify-content: flex-end;
+  align-content: space-between;
+  flex-direction: column;
+  
+}
+
+.customer-charges {
+  background-color: aqua;
+}
+
+.earnings-info {
+  background-color: lightcoral;
+}
