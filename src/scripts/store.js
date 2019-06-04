@@ -1,5 +1,11 @@
 'use strict';
 
-class store {
-  // data
-}
+const store = (function () {
+  // const meals = [];
+
+
+  return {
+    meals: [],
+  };
+
+})();
