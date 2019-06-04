@@ -9,8 +9,8 @@
 const calculatorHandler = (function() {
   
   function generateChargesHTML() {
-    let subtotal = 0.00;
-    let tip = 0.00;
+    let subtotal = Number(0.00);
+    let tip = Number(0.00);
     
 
     if (store.meals.length !== 0) {
@@ -53,6 +53,18 @@ const calculatorHandler = (function() {
     });
   }
 
+  function generateEarningsSummary() {
+    let tipElement = `<p>Tip Total: $${store.addAllTips()}</p>`;
+    let mealCount = `<p>Meal Count: ${store.meals.length}</p>`;
+    let averageTip = `<p>Average Tip Per Meal: $${store.calcAverageTip()}</p>`;
+    $('#earnings-grid').html(tipElement.concat(mealCount, averageTip));
+  }
+
+  function render() {
+    generateChargesHTML();
+    generateEarningsSummary();
+  }
+
 
   function handleInput() {
     readyInputListeners();
@@ -60,6 +72,7 @@ const calculatorHandler = (function() {
 
   return {
     handleInput,
+    render,
   };
 
 })();
