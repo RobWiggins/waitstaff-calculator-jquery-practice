@@ -1,30 +1,36 @@
 * {
   box-sizing: border-box;
+  justify-content: space-between;
 }
 
 body {
   margin-left: 15px;
   margin-right: 15px;
-  
 }
 
-.row-1 {
+/* .row-1 {
   display: flex;
   align-content: space-between;
   flex-direction: row;
   justify-content: flex-end;
   flex-wrap: wrap;
+  
+} */
+
+#calc-compartments {
+  display: flex;
+  background-color: bisque;
 }
 
 .col-1 {
-  display: flex;
-  justify-content: flex-start;
+  /* display: flex;
+  /* flex-basis: 50%; */
+  /* justify-content: flex-start; */ */
   background-color: gray;
 }
 
 .col-2 {
   display: flex;
-  
   justify-content: flex-end;
   align-content: space-between;
   flex-direction: column;
