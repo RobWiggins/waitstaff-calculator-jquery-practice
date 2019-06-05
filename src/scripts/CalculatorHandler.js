@@ -24,9 +24,7 @@ const calculatorHandler = (function() {
     let tipElement = `<p>Tip:  $${tip.toFixed(2)}</p>`;
     let total = `<p>Total:  $${(tip + subtotal).toFixed(2)}</p>`;
 
-    console.log(store.meals);
     $('#charges-grid').html(chargesElement + tipElement + total);
-    console.log('made it past cust charges');
   }
 
 
@@ -54,6 +52,14 @@ const calculatorHandler = (function() {
     });
   }
 
+  function readyResetButton() {
+    $('#reset-button').on('click', event => {
+      event.preventDefault();
+      store.resetMeals();
+      render();
+    });
+  }
+
   function generateEarningsSummary() {
     let tipElement = `<p>Tip Total: $${store.addAllTips().toFixed(2)}</p>`;
     let mealCount = `<p>Meal Count: ${store.meals.length}</p>`;
@@ -69,6 +75,7 @@ const calculatorHandler = (function() {
 
   function handleInput() {
     readyInputListeners();
+    readyResetButton();
   }  
 
   return {
