@@ -64,3 +64,13 @@ header {
 .earnings-info {
   background-color: lightcoral;
 }
+
+#reset-button {
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 150px;
+  font-weight: bold;
+}

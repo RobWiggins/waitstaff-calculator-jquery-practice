@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 /* global $ */
 
@@ -19,9 +20,9 @@ const calculatorHandler = (function() {
       tip = (Number(currMeal.tipRate) * subtotal);
     }
 
-    let chargesElement = `<p>Subtotal  $${subtotal}</p>`;
-    let tipElement = `<p>Tip  $${tip}</p>`;
-    let total = `<p>Total  $${tip + subtotal}</p>`;
+    let chargesElement = `<p>Subtotal:  $${subtotal.toFixed(2)}</p>`;
+    let tipElement = `<p>Tip:  $${tip.toFixed(2)}</p>`;
+    let total = `<p>Total:  $${(tip + subtotal).toFixed(2)}</p>`;
 
     console.log(store.meals);
     $('#charges-grid').html(chargesElement + tipElement + total);
@@ -49,14 +50,14 @@ const calculatorHandler = (function() {
 
       // generate customer charges html
       generateChargesHTML();
-
+      generateEarningsSummary();
     });
   }
 
   function generateEarningsSummary() {
-    let tipElement = `<p>Tip Total: $${store.addAllTips()}</p>`;
+    let tipElement = `<p>Tip Total: $${store.addAllTips().toFixed(2)}</p>`;
     let mealCount = `<p>Meal Count: ${store.meals.length}</p>`;
-    let averageTip = `<p>Average Tip Per Meal: $${store.calcAverageTip()}</p>`;
+    let averageTip = `<p>Average Tip Per Meal: $${store.calcAverageTip().toFixed(2)}</p>`;
     $('#earnings-grid').html(tipElement.concat(mealCount, averageTip));
   }
 

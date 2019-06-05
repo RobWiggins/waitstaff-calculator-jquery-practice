@@ -23,7 +23,8 @@ const store = (function () {
 
   function calcAverageTip() {
     if ( this.meals.length !== 0 ) {
-      return addAllTips() / this.meals.length;
+      console.log(this.meals);
+      return this.addAllTips() / this.meals.length;
     } else {
       return 0;
     }
