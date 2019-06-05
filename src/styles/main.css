@@ -3,6 +3,10 @@
   justify-content: space-between;
 }
 
+html {
+  background-color: snow;
+}
+
 body {
   margin-left: 15px;
   margin-right: 15px;
@@ -31,6 +35,7 @@ header {
 
 .compartment {
   padding: 15px;
+  
 }
 
 .col-1 {
@@ -38,7 +43,8 @@ header {
   flex-direction: column;
   /* justify-content: space-between; */
   align-content: flex-start;
-  background-color: bisque;
+  background-color: #3E92CC;
+  margin: 5px;
   /* flex-basis: 50%;
   /* justify-content: flex-start; */ */
   /* background-color: gray; */
@@ -50,6 +56,14 @@ header {
   align-content: space-between;
 }
 
+#meal-forms > label {
+  padding-top: 13px;
+}
+
+#meal-forms > button {
+  margin-top: 7px;
+}
+
 .col-2 {
   display: flex;
   justify-content: flex-end;
@@ -58,11 +72,13 @@ header {
 }
 
 .customer-charges {
-  background-color: aqua;
+  background-color:#2A628F;
+  margin: 5px;
 }
 
 .earnings-info {
-  background-color: lightcoral;
+  background-color: #3DB4CC;
+  margin: 5px;
 }
 
 #reset-button {
